@@ -30,7 +30,6 @@ STEP9 reset</p>
 程式如下</p>
 ```c++
 void setup() {
-  // put your setup code here, to run once:
   pinMode(2,INPUT);
   for(int i=3;i<11;i++)
   {
@@ -40,11 +39,9 @@ void setup() {
 }
 int a =1;
 void loop() {
-  // put your main code here, to run repeatedly:
-
     if(digitalRead(2)==0)
     { 
-      while(digitalRead(2)==0){delay(20);}
+      while(digitalRead(2)==0){delay(20);}//★防彈跳★
       a = a + 1;
       if(a>3)a = 1;
      
